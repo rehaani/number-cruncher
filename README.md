@@ -58,25 +58,6 @@ The calculator supports:
 To compile and run the program, you need:  
 - GCC compiler or any standard C compiler.  
 
-### **Installation**  
-
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/your-username/scientific-calculator.git  
-   cd scientific-calculator  
-   ```  
-
-2. Compile the program:  
-   ```bash  
-   gcc calculator.c -o calculator -lm  
-   ```  
-
-3. Run the executable:  
-   ```bash  
-   ./calculator  
-   ```  
-
----
 
 ## **Usage**  
 

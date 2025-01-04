@@ -50,9 +50,9 @@ int main() {
 void basicOperations() {
     double a, b, result;
     char op;
-    printf("Enter an operation (+, -, *, /): ");
+    printf("Enter an operation (+, -, *, /):\n ");
     scanf(" %c", &op);
-    printf("Enter two numbers: ");
+    printf("Enter two numbers:\n ");
     scanf("%lf %lf", &a, &b);
 
     switch (op) {
@@ -68,9 +68,9 @@ void basicOperations() {
 void trigonometricFunctions() {
     double angle, result;
     char func[10];
-    printf("Enter function (sin, cos, tan, sinh, cosh, tanh): ");
+    printf("Enter function (sin, cos, tan, sinh, cosh, tanh):\n ");
     scanf("%s", func);
-    printf("Enter angle in radians: ");
+    printf("Enter angle in radians:\n ");
     scanf("%lf", &angle);
 
     if (strcmp(func, "sin") == 0) result = sin(angle);
@@ -89,9 +89,9 @@ void trigonometricFunctions() {
 void logarithmicFunctions() {
     double x, result;
     char func[5];
-    printf("Enter function (ln, log, exp): ");
+    printf("Enter function (ln, log, exp):\n ");
     scanf("%s", func);
-    printf("Enter the value: ");
+    printf("Enter the value:\n ");
     scanf("%lf", &x);
 
     if (strcmp(func, "ln") == 0) result = log(x);
@@ -107,11 +107,11 @@ void logarithmicFunctions() {
 void powerRootFunctions() {
     double x, y, result;
     char func[5];
-    printf("Enter function (pow, sqrt, cbrt): ");
+    printf("Enter function (pow, sqrt, cbrt):\n ");
     scanf("%s", func);
 
     if (strcmp(func, "pow") == 0) {
-        printf("Enter base and exponent: ");
+        printf("Enter base and exponent:\n ");
         scanf("%lf %lf", &x, &y);
         result = pow(x, y);
     } else if (strcmp(func, "sqrt") == 0) {
@@ -132,10 +132,10 @@ void powerRootFunctions() {
 void statisticalFunctions() {
     int n, i;
     double sum = 0, mean, variance = 0, stddev;
-    printf("Enter the number of elements: ");
+    printf("Enter the number of elements:\n ");
     scanf("%d", &n);
     double data[n];
-    printf("Enter the data points: ");
+    printf("Enter the data points:\n ");
     for (i = 0; i < n; i++) {
         scanf("%lf", &data[i]);
         sum += data[i];
@@ -146,13 +146,13 @@ void statisticalFunctions() {
     }
     variance /= n;
     stddev = sqrt(variance);
-    printf("Mean: %.2lf, Variance: %.2lf, Standard Deviation: %.2lf\n", mean, variance, stddev);
+    printf(" Mean: %.2lf,\n Variance: %.2lf,\n Standard Deviation: %.2lf\n", mean, variance, stddev);
 }
 
 void combinatoricsFunctions() {
     int n, r;
     double nPr, nCr;
-    printf("Enter n and r (n >= r): ");
+    printf("Enter n and r (n >= r):\n ");
     scanf("%d %d", &n, &r);
 
     if (n < r) {
@@ -163,7 +163,7 @@ void combinatoricsFunctions() {
     nPr = tgamma(n + 1) / tgamma(n - r + 1);
     nCr = nPr / tgamma(r + 1);
 
-    printf("nPr: %.0lf, nCr: %.0lf\n", nPr, nCr);
+    printf(" nPr: %.0lf,\n nCr: %.0lf\n", nPr, nCr);
 }
 
 void integrationDifferentiation() {
@@ -172,7 +172,7 @@ void integrationDifferentiation() {
 
 void baseConversion() {
     int num, base;
-    printf("Enter a number and target base (2, 8, 10, 16): ");
+    printf("Enter a number and target base (2, 8, 10, 16):\n ");
     scanf("%d %d", &num, &base);
 
     if (base == 2) printf("Binary: %b\n", num);
